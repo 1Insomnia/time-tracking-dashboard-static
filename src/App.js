@@ -1,17 +1,23 @@
-import React from 'react'
 import useFetchData from './hooks/useFetchData'
 import MainLayout from './components/MainLayout/MainLayout'
+import TimeCardList from './components/TimeCardList/TimeCardList'
+import ProfileCard from './components/ProfileCard/ProfileCard'
 
 const App = () => {
   const { data, fetchError } = useFetchData()
   console.log([data, fetchError])
 
   return (
-    <div className="App">
+    <>
       <MainLayout>
-        {!fetchError && data.length > 0 ? <div>Success</div> : <div>Error</div>}
+        <ProfileCard title="Jeremy Robson" />
+        {!fetchError && data.length > 0 ? (
+          <TimeCardList dataSet={data}></TimeCardList>
+        ) : (
+          <div>Error</div>
+        )}
       </MainLayout>
-    </div>
+    </>
   )
 }
 

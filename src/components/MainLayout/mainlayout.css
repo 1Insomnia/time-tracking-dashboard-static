@@ -1,5 +1,12 @@
 .main-layout {
   max-width: var(--desktop);
-  padding: 0 1rem;
+  padding: 40px 1rem;
   margin: 0 auto;
+  color: var(--neutral-pale-blue);
+  background-color: var(--neutral-very-dark-blue);
+  min-height: 100vh;
+}
+
+button {
+  color: var(--neutral-pale-blue);
 }
