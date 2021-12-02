@@ -1,0 +1,5 @@
+.main-layout {
+  max-width: var(--desktop);
+  padding: 0 1rem;
+  margin: 0 auto;
+}
