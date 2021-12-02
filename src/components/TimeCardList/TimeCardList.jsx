@@ -1,12 +1,12 @@
 import React from 'react'
-import './timecard.css'
+import './timecardlist.css'
 import TimeCard from '../TimeCard/TimeCard'
 
-const TimeCardList = ({ dataSet }) => {
+const TimeCardList = ({ dataSet, filter }) => {
   return (
     <div className="time-card-list">
       {dataSet.map(values => (
-        <TimeCard {...values} key={values.title} />
+        <TimeCard {...values} filter={filter} key={values.title} />
       ))}
     </div>
   )

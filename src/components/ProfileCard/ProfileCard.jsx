@@ -1,8 +1,7 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import './profilecard.css'
 
-const ProfileCard = ({ title }) => {
+const ProfileCard = ({ title, setFilter }) => {
   return (
     <div className="profile-card">
       <div className="profile-card__header">
@@ -12,23 +11,51 @@ const ProfileCard = ({ title }) => {
           <h1 className="profile-card__title">{title}</h1>
         </div>
       </div>
-      <form className="profile-card__menu">
-        <button type="submit" className="profile-card__menu__btn">
+      <div className="profile-card__menu">
+        <button
+          type="submit"
+          className="profile-card__menu__btn"
+          onClick={() =>
+            setFilter({
+              filter: 'daily',
+              name: 'Day'
+            })
+          }
+        >
           Daily
         </button>
-        <button type="submit" className="profile-card__menu__btn">
+        <button
+          type="submit"
+          className="profile-card__menu__btn"
+          onClick={() =>
+            setFilter({
+              filter: 'weekly',
+              name: 'Week'
+            })
+          }
+        >
           Weekly
         </button>
-        <button type="submit" className="profile-card__menu__btn">
+        <button
+          type="submit"
+          className="profile-card__menu__btn"
+          onClick={() =>
+            setFilter({
+              filter: 'monthly',
+              name: 'Month'
+            })
+          }
+        >
           Monthly
         </button>
-      </form>
+      </div>
     </div>
   )
 }
 
 ProfileCard.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  setFilter: PropTypes.func
 }
 
 export default ProfileCard

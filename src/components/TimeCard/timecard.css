@@ -1,0 +1,35 @@
+.card {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+}
+
+.card__body {
+  background-color: var(--neutral-dark-blue);
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: var(--font-header);
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__current {
+  font-size: 24px;
+  font-weight: 300;
+}
